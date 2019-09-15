@@ -1,0 +1,100 @@
+@import 'keyframes.css';
+
+html, body {
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: #f0f2f4;
+	background: #020408; 
+	box-sizing: border-box;
+	padding: 8%;
+}
+
+main, main > output, main > section { 
+	border: 1px solid #666532; 
+	border-radius: 6px;
+}
+
+main {
+	height: 80%;
+	width: 100%;
+	margin: auto;
+	box-sizing: border-box;
+	background: linear-gradient(36deg, #3f5d63, #283634, #34484b);
+	box-shadow: 8px 8px 4px #26202c;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+main > output, main > section {
+	height: 36vh;
+	width: 36vh;
+}
+
+main > output {
+	background: linear-gradient(45deg,#1e2928, #0d160e, #1c2e18);
+	box-shadow: 6px 6px 12px #102013 inset, -6px -6px 12px #0b1b0f inset; 
+}
+
+svg { height: 100%; width: 100%; }
+
+g {
+	fill: none;	
+	stroke-width: 1;
+	stroke-miterlimit: 10;
+	animation: sinewave 2s linear infinite, crt 2s linear infinite;
+}
+
+main > section {
+	background: linear-gradient(45deg, #1d1a10, #29261e, #1f1c12);
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+slider {
+	background: #040812;
+	display: block;
+	height: 80%;
+	width: 20px;
+	flex: .032;
+}
+
+slider > thumb {
+	background: linear-gradient(45deg, #8a773a, #3a3424, #706232);
+	position: relative;
+	display: block;
+	height: 10%;
+	width: 100%;
+	animation: slider 0s linear infinite forwards;
+}
+
+slider:nth-child(1) > thumb { animation-duration: 2s; }
+slider:nth-child(2) > thumb { animation-duration: 5s; }
+slider:nth-child(3) > thumb { animation-duration: 3s; }
+slider:nth-child(4) > thumb { animation-duration: 4s; }
+
+footer {
+	display: flex;
+	justify-content: space-between;
+}
+
+a {
+	color: darkturquoise;
+	display: block;
+	font-family: 'Courier New', Courier, monospace;
+	line-height: 32px;
+	text-align: right;
+	text-decoration: none;
+}
+
+@media screen and (max-height: 600px) {
+	main { height: 96%; }
+}

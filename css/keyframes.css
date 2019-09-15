@@ -1,0 +1,18 @@
+/** Animation Keyframes */
+
+@keyframes sinewave {
+	0% { transform: translateX(0) }
+	100% { transform: translateX(-100%) }
+}
+
+@keyframes crt {
+	0% { stroke:  #0d4b0d;}
+	50% { stroke: #33a133; }
+	100% { stroke: #0d4b0d; }
+}
+
+@keyframes slider {
+	0% { top: 90%; }
+	50% { top: 0%; }
+	100% { top: 90%; }
+}
